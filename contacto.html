@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <!-- 🔹 SEO -->
+  <title>Contacto | TaxiManoloGC 🚖 Gran Canaria</title>
+  <meta name="description" content="Contacta con TaxiManoloGC para reservar tu traslado o excursión en Gran Canaria. Atención directa por teléfono o WhatsApp." />
+  <meta name="keywords" content="contacto taxi, reservar taxi gran canaria, whatsapp taxi, taxi aeropuerto, taxi gran canaria" />
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://chh3f.github.io/taximanologc/contacto.html" />
+
+  <!-- 🔹 Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Contacto | TaxiManoloGC Gran Canaria" />
+  <meta property="og:description" content="Reserva tu taxi o excursión en Gran Canaria con TaxiManoloGC. Contacto directo y respuesta rápida." />
+  <meta property="og:image" content="https://chh3f.github.io/taximanologc/assets/img/taxi-grancanaria.jpg" />
+  <meta property="og:url" content="https://chh3f.github.io/taximanologc/contacto.html" />
+
+  <!-- 🔹 Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contacto | TaxiManoloGC Gran Canaria">
+  <meta name="twitter:description" content="Habla con TaxiManoloGC por WhatsApp o teléfono y reserva tu traslado o excursión.">
+  <meta name="twitter:image" content="https://chh3f.github.io/taximanologc/assets/img/taxi-grancanaria.jpg">
+
+  <!-- 🔹 Geolocalización -->
+  <meta name="language" content="es">
+  <meta name="geo.region" content="ES-GC">
+  <meta name="geo.placename" content="Gran Canaria">
+
+  <!-- 🔹 Estilos y favicons -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="assets/img/favicon/site.webmanifest">
+  <meta name="theme-color" content="#ffd500">
+  <link rel="shortcut icon" href="assets/img/favicon/favicon.ico">
+</head>
+
+<body>
+  <header>
+    <div class="container header-row">
+      <div class="brand">
+        <img src="assets/img/logo.png" alt="Logo" class="logo">
+        <div>
+          <div class="brand-title">TaxiManoloGC</div>
+          <div class="brand-sub">Gran Canaria</div>
+        </div>
+      </div>
+
+      <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="conocenos.html">Conócenos</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="rutas.html">Rutas</a></li>
+          <li><a href="contacto.html" class="active">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="ctas">
+        <a class="btn whatsapp" href="https://wa.me/34606576272" target="_blank">💬 WhatsApp</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="container contact-section">
+      <h1>Reserva o contacto</h1>
+      <p class="lead">Rellena el formulario y se abrirá WhatsApp con tu mensaje listo para enviar al taxista.</p>
+
+      <form id="whatsappForm" class="contact-form">
+        <!-- 🧱 Honeypot anti-spam oculto -->
+        <input type="text" name="empresa" id="empresa" style="display:none;">
+
+        <div class="form-grid">
+          <label><span>Nombre</span><input type="text" name="nombre" required></label>
+          <label><span>Teléfono</span><input type="tel" name="telefono" required></label>
+          <label style="grid-column:1/-1"><span>Origen</span><input type="text" name="origen" placeholder="Calle, ciudad" required></label>
+          <label style="grid-column:1/-1"><span>Destino</span><input type="text" name="destino" placeholder="Calle, ciudad" required></label>
+          <label><span>Fecha y hora</span><input type="datetime-local" name="fecha" required></label>
+          <label><span>Pasajeros</span><input type="number" name="pasajeros" min="1" max="8" value="1" required></label>
+          <label style="grid-column:1/-1"><span>Notas (opcional)</span><textarea name="notas" rows="4" placeholder="Ej. Llevo equipaje, etc."></textarea></label>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn whatsapp">Enviar y abrir WhatsApp</button>
+          <a class="btn outline" href="https://wa.me/34606576272" target="_blank">Reservar directamente</a>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-row">
+      <div>
+        <strong>TaxiManoloGC</strong>
+        <div class="muted">Gran Canaria · +34 606 57 62 72</div>
+      </div>
+      <div class="footer-links">
+        <a href="rutas.html">Rutas</a>
+        <a href="contacto.html">Reserva</a>
+        <a href="aviso-legal.html">Aviso Legal</a>
+        <a href="privacidad.html">Privacidad</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- === Script de validación y envío === -->
+  <script>
+    document.getElementById("whatsappForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const form = e.target;
+      const nombre = form.nombre.value.trim();
+      const telefono = form.telefono.value.trim();
+      const origen = form.origen.value.trim();
+      const destino = form.destino.value.trim();
+      const fecha = form.fecha.value;
+      const pasajeros = form.pasajeros.value;
+      const notas = form.notas.value.trim();
+      const empresa = form.empresa.value.trim(); // honeypot
+
+      // 🧱 Verificación anti-spam (honeypot)
+      if (empresa !== "") {
+        alert("Error: envío no válido (spam detectado).");
+        return;
+      }
+
+      // ✅ Validación del teléfono
+      const telefonoValido = /^[0-9]{8,15}$/.test(telefono);
+      if (!telefonoValido) {
+        alert("Por favor, introduce un número de teléfono válido (solo números, sin espacios ni guiones).");
+        form.telefono.focus();
+        return;
+      }
+
+      // Construcción del mensaje
+      let mensaje = `🚖 *Nueva solicitud de reserva*%0A%0A`;
+      mensaje += `👤 *Nombre:* ${encodeURIComponent(nombre)}%0A`;
+      mensaje += `📞 *Teléfono:* ${encodeURIComponent(telefono)}%0A`;
+      mensaje += `📍 *Origen:* ${encodeURIComponent(origen)}%0A`;
+      mensaje += `🏁 *Destino:* ${encodeURIComponent(destino)}%0A`;
+      mensaje += `🗓️ *Fecha y hora:* ${encodeURIComponent(fecha)}%0A`;
+      mensaje += `👥 *Pasajeros:* ${encodeURIComponent(pasajeros)}%0A`;
+      if (notas) mensaje += `%0A📝 *Notas:* ${encodeURIComponent(notas)}%0A`;
+      mensaje += `%0AEnviado desde la web de TaxiManoloGC.`;
+
+      const url = `https://wa.me/34606576272?text=${mensaje}`;
+      window.open(url, "_blank");
+    });
+  </script>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/banner.js"></script>
+</body>
+</html>

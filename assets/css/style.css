@@ -1,0 +1,379 @@
+/* === Tipografías y variables === */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@300;400;600&display=swap');
+
+:root{
+  --taxi-yellow: #f9c400;
+  --ocean-blue: #005f73;
+  --dark: #0f1720;
+  --muted: #6b7280;
+  --bg: #fffdf8;
+  --card: #ffffff;
+  --radius: 12px;
+}
+
+/* Reset y layout */
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;height:100%}
+body{
+  font-family:"Open Sans", system-ui, -apple-system, "Segoe UI", Roboto;
+  background:var(--bg);
+  color:var(--dark);
+  display:flex;
+  flex-direction:column;
+  min-height:100vh;
+}
+
+/* ===== Header ===== */
+header{
+  background: linear-gradient(90deg, var(--taxi-yellow), #ffd84c);
+  box-shadow:0 4px 18px rgba(2,6,23,0.08);
+  position:sticky; top:0; z-index:120;
+}
+.container{max-width:1100px;margin:0 auto;padding:1rem}
+.header-row{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:0.8rem}
+.logo{height:48px;border-radius:8px;object-fit:cover}
+.brand-title{font-family:'Montserrat',sans-serif;font-weight:700;font-size:1.05rem}
+.brand-sub{font-size:.85rem;color:var(--dark);opacity:.8}
+
+/* Nav */
+nav{flex:1}
+.nav-list{display:flex;gap:1rem;list-style:none;padding:0;margin:0;justify-content:center}
+.nav-list a{text-decoration:none;color:var(--dark);font-weight:600;padding:.35rem .6rem;border-radius:8px;transition:all .3s ease}
+.nav-list a.active, .nav-list a:hover{background:rgba(0,0,0,0.04);color:var(--ocean-blue)}
+.menu-toggle{display:none;background:none;border:0;font-size:1.8rem;cursor:pointer;transition:transform .3s ease}
+.menu-toggle.open{transform:rotate(90deg)}
+
+/* CTA */
+.ctas{display:flex;gap:.6rem;align-items:center}
+.btn{display:inline-block;padding:.55rem .9rem;border-radius:10px;text-decoration:none;font-weight:700;cursor:pointer}
+.btn.whatsapp{background:var(--ocean-blue);color:#fff}
+.btn.outline{background:#fff;border:2px solid var(--ocean-blue);color:var(--ocean-blue)}
+
+/* Hero */
+.hero{display:flex;gap:2rem;align-items:center;padding:2.2rem 0}
+.hero-left{flex:1;min-width:280px}
+.eyebrow{display:inline-block;background:rgba(0,0,0,0.05);padding:.25rem .6rem;border-radius:999px;font-weight:600;color:var(--dark);font-size:.85rem}
+h1{font-family:'Montserrat',sans-serif;color:var(--ocean-blue);margin:.6rem 0}
+.lead{color:var(--dark);line-height:1.6;font-size:1.05rem}
+.hero-actions{margin-top:1rem;display:flex;gap:.8rem;flex-wrap:wrap}
+.features{display:flex;gap:1rem;margin-top:1rem;list-style:none;padding:0}
+.features li{font-weight:600;color:var(--muted)}
+
+/* Hero image */
+.hero-right{flex:0 0 420px}
+.hero-img{width:100%;border-radius:12px;box-shadow:0 10px 30px rgba(2,6,23,0.06);object-fit:cover}
+
+/* Cards overview */
+.cards-overview{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;padding:1.5rem 0}
+.card{background:var(--card);padding:1.2rem;border-radius:var(--radius);box-shadow:0 8px 26px rgba(2,6,23,0.04);border:1px solid rgba(2,6,23,0.03)}
+
+/* CTA banner */
+.cta-banner{background:linear-gradient(90deg,#fff7e1,#e8fff7);padding:.8rem 0;margin-top:1rem;border-radius:10px}
+.cta-banner .container{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.cta-text strong{display:block;font-weight:700}
+.muted{color:var(--muted)}
+
+/* Services grid */
+.services-grid{padding:2rem 0}
+.service-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem}
+.service{display:flex;gap:1rem;align-items:flex-start;background:#fff;padding:1rem;border-radius:10px;border:1px solid rgba(2,6,23,0.03)}
+.service-icon{width:56px;height:56px;border-radius:10px;background:linear-gradient(180deg,var(--taxi-yellow),#ffd84c);display:grid;place-items:center;font-size:1.4rem}
+
+/* Rutas */
+.routes-grid{display:grid;grid-template-columns:380px 1fr;gap:1.2rem;align-items:start}
+.map-card img{width:100%;border-radius:10px;box-shadow:0 8px 20px rgba(2,6,23,0.06)}
+.routes-list{display:flex;flex-direction:column;gap:1rem}
+.route{display:flex;gap:1rem;align-items:flex-start;background:#fff;padding:1rem;border-radius:10px;border:1px solid rgba(2,6,23,0.03)}
+.route-dot{width:14px;height:14px;border-radius:999px;margin-top:.5rem}
+.route-dot.yellow{background:#f9c400}
+.route-dot.red{background:#ef4444}
+.route-dot.blue{background:#3b82f6}
+.route-dot.green{background:#16a34a}
+
+/* Contact form */
+.contact-section{padding:2rem 0}
+.contact-form{background:#fff;padding:1.2rem;border-radius:12px;border:1px solid rgba(2,6,23,0.03)}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+.form-grid label{display:block}
+.form-grid input,.form-grid textarea{width:100%;padding:.6rem;border-radius:8px;border:1px solid rgba(2,6,23,0.06)}
+.form-actions{margin-top:.8rem;display:flex;gap:.6rem;align-items:center}
+
+/* Footer */
+footer{margin-top:auto;background:linear-gradient(90deg,var(--taxi-yellow),#ffd84c);padding:1rem;border-top:1px solid rgba(0,0,0,0.06)}
+.footer-row{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
+.footer-links a{text-decoration:none;color:var(--dark);margin-left:1rem;font-weight:700}
+
+/* === RESPONSIVE === */
+@media (max-width:1000px){
+  .cards-overview{grid-template-columns:repeat(2,1fr)}
+  .routes-grid{grid-template-columns:1fr}
+  .hero-right{flex-basis:360px}
+}
+
+@media (max-width:760px){
+  .nav-list{display:none;flex-direction:column;gap:.6rem;margin-top:.8rem;text-align:center}
+  .nav-list.open{display:flex;background:#fff;border-radius:10px;padding:.8rem;box-shadow:0 8px 16px rgba(0,0,0,0.1)}
+  .menu-toggle{display:block}
+  .ctas{width:100%;justify-content:center}
+  .header-row{align-items:flex-start}
+  .cards-overview{grid-template-columns:1fr}
+  .hero{flex-direction:column}
+  .hero-right{order:-1;width:100%}
+  .form-grid{grid-template-columns:1fr}
+}
+
+/* === CONÓCENOS: IMAGEN CON FONDO Y SOMBRA (Corregido) === */
+.about-img-wrapper {
+  position: relative;
+  display: inline-block;
+  margin-top: 2rem;
+  text-align: center;
+  overflow: hidden; /* evita que el brillo sobresalga */
+}
+
+.about-img-wrapper::before {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle at 40% 60%, #fff6a0 0%, #ffd84c 55%, transparent 100%);
+  border-radius: 50%;
+  z-index: 0;
+  opacity: 0.85;
+  pointer-events: none; /* evita interacción accidental */
+}
+
+.about-img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 380px;
+  filter: drop-shadow(0 12px 24px rgba(0,0,0,0.15));
+  border-radius: 16px;
+  transition: transform 0.3s ease;
+}
+
+.about-img:hover {
+  transform: translateY(-5px);
+}
+
+/* === CORRECCIÓN: MENÚ HAMBURGUESA EN CONTACTO === */
+
+/* Mantiene el header y el menú siempre por encima */
+header, nav, .nav-list {
+  position: relative;
+  z-index: 1000;
+}
+
+/* Asegura que el formulario o contenedores no tapen el menú */
+.contact-section,
+.contact-form {
+  position: relative;
+  z-index: 1;
+  overflow: visible;
+}
+
+/* Mejora visual del menú desplegable en móviles */
+@media (max-width: 760px) {
+  nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+  }
+  .nav-list.open {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    padding: 1rem;
+    position: relative;
+    z-index: 999;
+  }
+}
+
+/* === Páginas Legales === */
+.legal-page {
+  padding: 2rem 0;
+  max-width: 850px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.legal-page h1 {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--ocean-blue);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.legal-page h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--dark);
+  font-size: 1.3rem;
+  margin-top: 2rem;
+  border-left: 4px solid var(--taxi-yellow);
+  padding-left: .6rem;
+}
+
+.legal-page p {
+  color: var(--dark);
+  margin-top: .6rem;
+}
+
+.legal-page strong {
+  color: var(--ocean-blue);
+}
+
+.legal-page a {
+  color: var(--ocean-blue);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.legal-page a:hover {
+  text-decoration: underline;
+}
+
+/* Sombra y fondo suave para legibilidad */
+.legal-page {
+  background: #ffffff;
+  border-radius: var(--radius);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+  padding: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Responsivo */
+@media (max-width: 760px) {
+  .legal-page {
+    padding: 1.2rem;
+    margin: 1rem;
+  }
+  .legal-page h1 {
+    font-size: 1.6rem;
+  }
+  .legal-page h2 {
+    font-size: 1.15rem;
+  }
+}
+
+/* === Banner de Política de Privacidad === */
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #ffffff;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 1rem;
+  font-size: 0.9rem;
+  color: var(--dark);
+  z-index: 2000;
+  flex-wrap: wrap;
+}
+
+.cookie-banner a {
+  color: var(--ocean-blue);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.cookie-banner a:hover {
+  text-decoration: underline;
+}
+
+.cookie-buttons {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.cookie-buttons button {
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  border: 1px solid var(--ocean-blue);
+  background: var(--ocean-blue);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.cookie-buttons button:last-child {
+  background: transparent;
+  color: var(--ocean-blue);
+}
+
+.cookie-buttons button:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 600px) {
+  .cookie-banner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .cookie-buttons {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+/* === Consentimiento RGPD en formulario === */
+.privacy-consent {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: var(--dark);
+  line-height: 1.5;
+}
+
+.privacy-consent input[type="checkbox"] {
+  margin-right: 0.4rem;
+  accent-color: var(--ocean-blue);
+  cursor: pointer;
+}
+
+.privacy-consent a {
+  color: var(--ocean-blue);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.privacy-consent a:hover {
+  text-decoration: underline;
+}
+
+.privacy-note {
+  margin: 0.4rem 0 0 1.4rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+/* --- FIX: mapa invisible en Safari iPhone --- */
+.map-card {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.map-card iframe {
+  width: 100%;
+  min-height: 360px; /* fuerza altura visible en móvil */
+  height: 60vh;      /* se adapta al alto de pantalla */
+  border: 0;
+  display: block;
+}
