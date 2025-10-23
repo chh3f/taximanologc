@@ -1,2 +1,0 @@
-# Forzar archivos XML a servirse con el tipo MIME correcto
-*.xml text working-tree-encoding=UTF-8 eol=lf
