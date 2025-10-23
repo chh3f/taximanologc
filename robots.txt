@@ -9,6 +9,3 @@ Disallow: /_redirects
 
 # Sitemap principal
 Sitemap: https://chh3f.github.io/taximanologc/sitemap.xml
-
-# Información adicional
-Host: https://chh3f.github.io/taximanologc
